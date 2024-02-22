@@ -1,17 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-img src="/assets/lito-app.png" alt="lito" class="logo"></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-text>
+    <h1 class="text-welcome">Que quieres hacer hoy?</h1>
+  </ion-text>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="text-container-1">
+    <ion-text color="primary">
+      <h1 class="text-action">Cotizar una poliza</h1>
+    </ion-text>
+  </div>
+
+  <p *nIf="companies.length > 0" class="text-popular">Aseguradoras mas populares</p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let company of companies">
+        <ion-card style="border: 2px #59b4c3 solid; height: 100%;" class="ion-no-margin">
+          <ion-card-content>
+            <ion-img [src]="company.image" alt="lito" class="logo"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div  style="display: flex; justify-content: center">
+    <ion-button fill="clear" (click)="navigateToTab2()">
+      <span  class="button__action1--text">{{ companies.length > 0  ? 'Ver mas aseguradoras' : 'Agregar Aseguradora'}}</span>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <div class="banner-container">
+    <div class="banner">
+      <div class="banner-layer">
+        <div style="width: 50%">
+          <p class="banner__text banner__text--1">
+            Renueva tu poliza hoy con hasta un
+          </p>
+          <p class="banner__text banner__text--2">20% Off</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

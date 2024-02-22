@@ -1,0 +1,31 @@
+<div style="padding: 30px">
+  <form #companyForm="ngForm">
+    <ion-item>
+      <ion-input
+        name="name"
+        [(ngModel)]="model.name"
+        required
+        labelPlacement="floating"
+      >
+        <div slot="label">Nombre</div>
+      </ion-input>
+    </ion-item>
+    <ion-input name="image" [(ngModel)]="model.image" labelPlacement="floating">
+      <div slot="label">Link imagen</div>
+    </ion-input>
+
+    <ion-textarea
+      name="description"
+      fill="solid"
+      label="Descripcion"
+      labelPlacement="floating"
+      [(ngModel)]="model.description"
+    ></ion-textarea>
+
+    <div style="display: flex">
+      <ion-button type="submit" (click)="submit()" [disabled]="!companyForm.valid"
+        >Guardar</ion-button
+      >
+    </div>
+  </form>
+</div>

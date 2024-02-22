@@ -1,0 +1,73 @@
+.logo {
+  width: 75px;
+  border-radius: 50%;
+}
+
+.text-welcome {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.text-container-1 {
+  background-color: var(--ion-color-primary);
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.text-action {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.text-popular {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.button__action1--text {
+  color: #000; text-decoration: underline
+}
+
+.banner-container {
+  padding: 20px;
+}
+
+.banner {
+  background-image: url("/assets/car.jpeg"); /* Reemplaza con tu propia imagen */
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.banner-layer {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 4, 134, 1) 99%
+  );
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.banner__text {
+  color: #eff396;
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner__text--1 {
+  font-size: 22px;
+}
+
+.banner__text--2 {
+  font-size: 40px;
+}
